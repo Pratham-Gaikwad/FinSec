@@ -1,0 +1,29 @@
+.Overview-main{
+    display: grid;
+    grid-template-rows: 5rem 1fr 2fr 1fr 5rem;
+    width: 100%;
+    height: 100%;
+    /* background-color: beige; */
+}
+.Overview-row-1{
+    grid-row: 1/2;
+    font-size: 6vh;
+}
+
+.Overview-row-2{
+    display: grid;
+    grid-template-columns: 1rem 2fr 5rem  1rem ;
+}
+
+.UserName{
+    grid-column: 2/3;
+    font-size: 3vh;
+}
+
+.OvervierDate{
+    grid-column: 5/6;
+    font-size: 3vh;
+}
+
+
+/* Overview Cards Styling */
