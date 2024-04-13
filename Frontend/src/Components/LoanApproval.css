@@ -1,0 +1,12 @@
+.Approval-main{
+    display: grid;
+    grid-template-rows: 5rem 2fr 2rem 5fr 5fr 5rem;
+    width:100%;
+    height:100vh;
+}
+
+.Approval-row-1{
+    grid-row: 1/2;
+    font-size: 6vh;
+    color: whitesmoke;
+}

@@ -2,6 +2,7 @@ import "./NavBar.css"
 
 // import {Link} from 'react-scroll'
 import Overview from "./Overview";
+import LoanApproval from "./LoanApproval";
 
 
 
@@ -31,7 +32,7 @@ const NavBar = () => {
               <a href="#Overview">Overview</a>
             </li>
             <li>
-              <a href="#About">LoanApproval</a>
+              <a href="#LoanApproval">LoanApproval</a>
             </li>
             <li>
               <a href="#Resume">CreditCheck</a>
@@ -76,7 +77,7 @@ const NavBar = () => {
         </div> 
 
         <div className="Cointainer">
-          <div className="Component" id="About"> <h2>MAchine Learing </h2> </div>
+          <div className="Component" id="LoanApproval"> <LoanApproval/> </div>
          </div> 
 
          <div className="Cointainer">
