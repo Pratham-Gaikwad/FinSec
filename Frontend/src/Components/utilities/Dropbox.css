@@ -1,0 +1,44 @@
+.dropbox-container {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    height: 700%;
+  }
+  
+  .upload-placeholder {
+    margin-top: 2%;
+    cursor: pointer;
+  }
+  
+  .upload-placeholder p {
+    color: whitesmoke;
+    font-size: 5vh;
+    margin: 0;
+  }
+  
+  .upload-placeholder input {
+    display: none;
+  }
+  
+  .uploaded-image-container {
+    margin-bottom: 10px;
+  }
+  
+  .uploaded-image {
+    max-width: 100%;
+  }
+  
+  button {
+    margin-top: 6%;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

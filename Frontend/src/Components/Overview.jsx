@@ -1,6 +1,6 @@
 // import React from 'react';
 import "./Overview.css";
-import LineChart from "./LineGraph";
+import LineChart from "./utilities/LineGraph";
 
 export default function Overview() {
     function formatDate(date) {

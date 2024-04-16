@@ -1,5 +1,7 @@
 import"./LoanApproval.css"
 
+import Dropbox from "./utilities/Dropbox"
+
 const LoanApproval = () => {
   return (
     <div>
@@ -7,6 +9,10 @@ const LoanApproval = () => {
 
         <span className="Approval-row-1">Loan Approval</span>
 
+
+        <div className="Approval-row-2">
+          <Dropbox/>
+        </div>
         </div>
     </div>
   )
