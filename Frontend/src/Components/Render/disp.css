@@ -1,0 +1,8 @@
+.Cointainer{
+    display: flex;
+    flex-direction: column;
+    background-color:#151619;
+  }
+  /* .item-2{
+    margin-top: 1%;
+  } */

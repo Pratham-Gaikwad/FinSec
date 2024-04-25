@@ -10,10 +10,10 @@ ChartJS.register(
 
 const LineChart = () => {
   let data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['Credit Score', 'Debt-to-Income', 'Employment History', 'Loan Amount', 'Loan Amortixation Ratio'],
     datasets: [{
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      data: [19, 15, 20, 5, 18, 3],
       borderWidth: 1,
       backgroundColor: [
         'red',
@@ -46,7 +46,7 @@ const LineChart = () => {
         },
         title: {
           display: true,
-          text: 'X-Axis Label',
+          text: 'Approval Factors',
           color: 'white' // Set the color of x-axis label to white
         }
       },
@@ -60,7 +60,7 @@ const LineChart = () => {
         },
         title: {
           display: true,
-          text: 'Y-Axis Label',
+          text: 'Score',
           color: 'white' // Set the color of y-axis label to white
         }
       }
@@ -90,7 +90,7 @@ const LineChart = () => {
   return (
     <div>
       <Line
-        height={300}
+        height={50}
         data={data}
         options={options}
       />

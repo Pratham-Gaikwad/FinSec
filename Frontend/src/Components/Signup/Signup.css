@@ -1,0 +1,72 @@
+.register-main{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+}
+
+.reg-grp{
+  margin-top: 20%;
+  grid-column: 2/3;
+}
+
+
+
+
+.HeadingForm {
+    margin-top: 2%;
+    color: blue;
+    text-align: center;
+}
+
+form {
+  height: fit-content;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid rgb(255, 250, 250);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  color:whitesmoke;
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.Submit-Login {
+    margin-left: 30%;
+  /* padding: 10px; */
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+p{
+  color: whitesmoke;
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 5px;
+}
+
+.Loginbtn{
+    margin-left: 30%;
+    /* padding: 10px; */
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}

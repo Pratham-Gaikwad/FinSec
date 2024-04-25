@@ -1,16 +1,21 @@
 
 import './App.css'
-import NavBar from "./Components/NavBar.jsx"
-
+import Login from './Components/Login/Login'
+import Disp from './Components/Render/disp'
+import Signup from './Components/Signup/Signup'
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
 function App() {
  
-  return (
-    <>
-    <div className='Cointainer'>
-    <div className='item-1'>
-    <NavBar/>
-    </div>
-    </div>
+  return (  
+  <>
+
+     <BrowserRouter>
+    <Routes>
+      <Route path='/register' element = {<Signup/>}></Route>
+      <Route path='/login' element = {<Login/>}></Route>
+      < Route path='/disp' element = {<Disp/>}></Route>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
