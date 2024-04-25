@@ -30,7 +30,7 @@ app.post('/login', (req, res) => {
    .then(user => {
       if(user){
         if(user.password === req.body.password){
-          res.json("Success")
+          res.json({message:"success", user:user.name});
         }
         else{
           res.json("Wrong Password")
