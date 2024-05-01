@@ -5,30 +5,32 @@ const CustomerSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    email: {
-        type: String,
-        required: true
-    },
-    phone: {
-        type: String,
-        required: true
-    },
-    address: {
-        type: String,
-        required: true
-    },
-    payments: [{
-        type: String,
-        required: true
-    }],
+    payments: [{type: mongoose.Schema.Types.ObjectId,
+        ref:"Payment"}],
     country: {
+        type: String,
+        required: true
+    },
+    Dti: {
+        type: String,
+        required: true
+    },
+    CreditScore: {
+        type: String,
+        required: true
+    },
+    LAR: {
+        type: String,
+        required: true
+    },
+    EmpStatus: {
         type: String,
         required: true
     },
     date: {
         type: Date,
         default: Date.now
-    }
+    },
 });
 
 const Customer = mongoose.model('Customer', CustomerSchema);

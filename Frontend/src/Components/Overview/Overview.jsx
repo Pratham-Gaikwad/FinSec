@@ -1,8 +1,25 @@
 import "./Overview.css";
-import Searchbox from "../utilities/searchbox/searchbox";
+// import Searchbox from "../utilities/searchbox/searchbox";
 import LineChart from "../utilities/LineGraph";
+import { useState , useEffect} from "react";
+import axios from "axios";
+
 
 export default function Overview() {
+
+    const [name, setName] = useState("");
+    const [customer, setCustomer] = useState(null);
+
+    const fetchCustomer = async () => {
+        try {
+            const response = await axios.post(`http://localhost:3001/customer`,{name});
+            setCustomer(response.data);
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     function formatDate(date) {
         const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
         return new Date(date).toLocaleDateString('en-US', options);
@@ -10,17 +27,23 @@ export default function Overview() {
 
     const currentDate = new Date();
     const formattedDate = formatDate(currentDate);
-
+        
     return (
         <div className="Overview-main">
             <span className="Overview-row-1">
                 Overview
-                <Searchbox/>
+                
+                <div className='searchbox-main'>
+                    <input type='text' placeholder='Search' value={name} onChange={(e)=> setName(e.target.value)} className='searchbox' />
+                    <button onClick={fetchCustomer} className='searchbtn'>Search</button>
+                 </div>
+
+
                 </span>
 
 
             <div className="Overview-row-2">
-                <span className="UserName"> Pratham Gaikwad</span>
+                <span className="UserName"> {customer?.name}</span>
                 <span className="OvervierDate"> {formattedDate} </span>
             </div>
 
@@ -31,28 +54,28 @@ export default function Overview() {
                         <img className="stat-img" src="/money.svg" alt="Calander" />
                         <p>
                             <strong>Debt-Income ratio<br /></strong>
-                            45%
+                            {customer?.Dti}%
                         </p>
                     </div>
                     <div className="Appoinment-stat">
                     <img className="stat-img" src="/credit-card.svg" alt="Operations" />
                         <p>
                             <strong>Credit Score<br /></strong>
-                            780
+                            {customer?.CreditScore}
                         </p>
                     </div>
                     <div className="Appoinment-stat">
                     <img className="stat-img" src="/money.svg" alt="New Patient" />
                         <p>
                             <strong>Loan Amortization Ratio <br /></strong>
-                            80%
+                            {customer?.LAR}%
                         </p>
                     </div>
                     <div className="Appoinment-stat">
                     <img className="stat-img" src="/score.svg" alt="Doctors" />
                         <p>
                             <strong>Employment Status<br /></strong>
-                            Employed 
+                            {customer?.EmpStatus}
                         </p>
                     </div>
                 </div>
