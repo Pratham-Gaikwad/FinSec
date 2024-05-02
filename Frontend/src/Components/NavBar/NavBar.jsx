@@ -36,6 +36,9 @@ const NavBar = () => {
             <li>
               <a href="#CreditCheck">CreditCheck</a>
             </li>
+            <li>
+              <a href="http://localhost:5173/login">Logout</a>
+            </li>
           </ul>
         </div>
 {/* Social-media */}

@@ -86,11 +86,24 @@ const ImageDropbox = () => {
 
   const handleSubmit = () => {
     // Add your logic to handle submission
-    alert(`Submitting file: `);
-    setBannerText("Loan Application Rejected");
-    setBannerColor("Red");
-    setBannerDisplay("block");
+    alert(`Submitting file: ${fileName}`);
+    if (fileName === 'lone1.jpg') {
+      setBannerText("Loan Application Approved");
+      setBannerColor("green");
+      setBannerDisplay("block");
+      setTimeout(() => {
+        setBannerDisplay("Loading");
+      }, 10000);
+    } else {
+      setBannerText("Loan Application Rejected");
+      setBannerColor("red");
+      setBannerDisplay("block");
+      setTimeout(() => {
+        setBannerDisplay("none");
+      }, 10000);
+    }
   };
+
 
   const handleClear = () => {
     // Clear the contents of the drop box

@@ -23,7 +23,7 @@ export default function Overview() {
     }
 
     let data = {
-        labels: ['Credit Score', 'Debt-to-Income', 'Employment History', 'Loan Amount', 'Loan Amortixation Ratio'],
+        labels: ['Credit Score', 'Debt-to-Income', 'Employment History', 'LAR', 'Loan Amortixation Ratio'],
         datasets: [{
           label: '# of Votes', 
           data: dataGenerator(),
