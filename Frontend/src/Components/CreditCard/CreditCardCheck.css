@@ -17,3 +17,60 @@
     grid-row: 2/3;
 }
 
+/* Table css */
+/* TransactionTable.css */
+
+.transaction-table-container {
+    height: 100%; /* Adjust the height as needed */
+    overflow: auto;
+  }
+  
+  .transaction-table-header table,
+.transaction-table-body table,
+tr {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+tr {
+    background-color: #e0e0e0;
+}
+
+.ML-chk{
+    background-color: #ffcccc;
+}
+
+/* button */
+
+.Credit-searchbox-main{
+  margin-top: 1%;
+  display: flex;
+  justify-content:space-between;
+  flex-direction:row;
+}
+.Credit-searchbox {
+  border-radius: 10px 10px 10px 10px; /* Rounded corners for the search box */
+  padding: 10px;
+  margin-right: 1%;
+}
+
+.Credit-searchbtn {
+  border-radius: 10px 10px 10px 10px; /* Rounded corners for the search button */
+  cursor: pointer;
+}
+  .Credit-searchbtn:hover {
+      background-color: #151619;
+      color: whitesmoke;
+    }

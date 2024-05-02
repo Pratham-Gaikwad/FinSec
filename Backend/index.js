@@ -89,3 +89,16 @@ app.post('/payment', async (req, res) => {
     res.status(500).json({ message: "Internal Server Error", error: err.message });
   }
 });     
+
+app.post('/get-payment', async (req, res) => {
+  try {
+    const payments = await PaymentModel.find({ name: req.body.name });
+    if (payments.length > 0) {
+      res.json(payments);
+    } else {
+      res.status(404).json("Payments not found");
+    }
+  } catch (error) {
+    res.json("Internal Server Error");
+  }
+});

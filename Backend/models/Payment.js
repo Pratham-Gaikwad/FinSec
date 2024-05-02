@@ -31,11 +31,13 @@ const mongoose = require('mongoose');
 const { v4: uuidv4 } = require('uuid');
 
 const PaymentSchema = new mongoose.Schema({
-    payment_id: {
+    name :{
         type: String,
-        required: true,
-        unique: true,
-        default: uuidv4
+        required: true
+    },
+    Location : {
+        type: String,
+        required: true
     },
     amount: {
         type: Number,
@@ -45,12 +47,12 @@ const PaymentSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    reciver: {
-        type: String,
+    reciver_id: {
+        type: Number,
         required: true
     },
-    sender: {
-        type: String,
+    sender_id: {
+        type: Number,
         required: true
     }
 });
